@@ -1,239 +1,446 @@
-> **🇧🇷 Versão em Português** | **🇬🇧 English Version** | **🌐 Climax Web Site**
->
-> _[Ir para a versão em Português](#-climax-português)_ | _[Go to the English version](#-climax-english)_ |
-> [Climax Web Site](https://romaosantosalisson.github.io/climax/)
+# 🌤️ Climax
+
+### Seu clima. Em qualquer lugar. 🌎
+
+**Um painel meteorológico moderno, responsivo e acessível, desenvolvido com TypeScript puro e Vanilla CSS.**
+
+  <br />
+
+[🌐 **Acessar o Climax**](https://romaosantosalisson.github.io/climax/)
+
+  <br />
+
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7+-646CFF?style=for-the-badge\&logo=vite\&logoColor=white)
+![CSS](https://img.shields.io/badge/Vanilla_CSS-3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
+![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-4CAF50?style=for-the-badge)
+
+</div>
+
 ---
 
-# 🇧🇷 Climax (Português)
+## 📝 Sobre o Projeto
 
-## 📝 Descrição
+**Climax** é um painel meteorológico moderno desenvolvido com foco em **performance, acessibilidade, responsividade e experiência do usuário**.
 
-O **Climax** é um painel climático elegante e de alta performance desenvolvido inteiramente com TypeScript puro (sem frameworks pesados) e estilizado com CSS moderno (Vanilla CSS). Ele oferece uma experiência de usuário rica, responsiva e acessível, consumindo dados meteorológicos globais em tempo real da API Open-Meteo.
+A aplicação utiliza **TypeScript puro**, sem frameworks frontend, combinando **HTML5 semântico** e **Vanilla CSS** para criar uma interface leve e eficiente.
 
-### 📷 Demonstração (Imagens)
+Os dados meteorológicos são obtidos em tempo real através da **Open-Meteo API**, permitindo consultar condições climáticas de cidades ao redor do mundo. 🌎☁️
 
-Apresentamos uma interface altamente polida e adaptável, com suporte a temas claro, escuro e sincronização com o sistema operacional:
+> 💡 **Sem frameworks pesados. Sem dependências desnecessárias. Apenas tecnologias web modernas.**
 
-#### Tema Escuro (Dark Mode)
+---
+
+## 📱 Mobile-First & Responsividade
+
+Um dos principais objetivos do Climax é proporcionar uma experiência consistente independentemente do dispositivo utilizado.
+
+A interface foi desenvolvida seguindo a abordagem **Mobile-First**, começando pelo layout para telas menores e evoluindo progressivamente para tablets, notebooks e monitores maiores.
+
+### 📐 Estratégia responsiva
+
+* 📱 **Mobile First** — prioridade para dispositivos móveis
+* 📲 Layout adaptável para tablets
+* 💻 Experiência otimizada para desktops
+* 🖥️ Aproveitamento de telas maiores
+* 🧩 CSS Grid e Flexbox para construção dos layouts
+* 📐 Breakpoints responsivos
+* 👆 Componentes e controles adaptados para interação por toque
+* 🔄 Conteúdo reorganizado de acordo com o tamanho da tela
+
+O resultado é uma interface que mantém **usabilidade, legibilidade e organização visual** em diferentes resoluções.
+
+---
+
+## 📸 Demonstração
+
+### 🌙 Tema Escuro
 
 <p align="center">
-  <img src="./src/assets/images/climax-dark-1.png" alt="Climax Dark Mode - Início" width="45%" style="border-radius: 8px; margin-right: 2%;" />
-  <img src="./src/assets/images/climax-dark-2.png" alt="Climax Dark Mode - Detalhes" width="45%" style="border-radius: 8px;" />
+  <img src="./src/assets/images/climax-dark-1.png" alt="Climax Dark Mode - Início" width="45%" />
+  <img src="./src/assets/images/climax-dark-2.png" alt="Climax Dark Mode - Detalhes" width="45%" />
 </p>
 
-#### Tema Claro (Light Mode)
+### ☀️ Tema Claro
 
 <p align="center">
-  <img src="./src/assets/images/climax-light-1.png" alt="Climax Light Mode - Início" width="45%" style="border-radius: 8px; margin-right: 2%;" />
-  <img src="./src/assets/images/climax-light-2.png" alt="Climax Light Mode - Detalhes" width="45%" style="border-radius: 8px;" />
+  <img src="./src/assets/images/climax-light-1.png" alt="Climax Light Mode - Início" width="45%" />
+  <img src="./src/assets/images/climax-light-2.png" alt="Climax Light Mode - Detalhes" width="45%" />
 </p>
 
-### ✨ Funcionalidades Principais
+---
 
-- **Busca Global de Cidades:** Encontre informações meteorológicas de qualquer cidade do mundo com auto-completar inteligente de geolocalização.
-- **Geolocalização Nativa:** Encontre o clima da sua localização atual de forma instantânea com apenas um clique usando a API do navegador.
-- **Previsão para 7 Dias:** Visualização limpa e intuitiva do clima para toda a semana com temperaturas máximas, mínimas e condições ilustradas.
-- **Métricas e Destaques Diários:**
-  - **Índice UV:** Exibido com indicador gráfico de intensidade de 0 a 12.
-  - **Status do Vento:** Velocidade (km/h) e direção precisa com bússola em graus (°).
-  - **Nascer e Pôr do Sol:** Horários exatos baseados no fuso horário da cidade buscada.
-  - **Umidade e Sensação Térmica:** Nível de umidade atual e temperatura sentida pelo corpo.
-  - **Visibilidade:** Medição precisa da visibilidade em quilômetros.
-  - **Qualidade do Ar:** Índice de qualidade do ar dos EUA (AQI) com classificações em tempo real (Bom, Moderado, Atenção, Pouco Saudável).
-- **Internacionalização (i18n):** Suporte nativo completo a três idiomas: **Português (pt-BR)**, **Inglês (en-US)** e **Espanhol (es)**.
-- **Temas Flexíveis:** Alternância suave entre temas **Claro (Light)**, **Escuro (Dark)** e **Sistema (System)**, adaptando os elementos gráficos e acessíveis.
-- **Conversão de Unidade de Temperatura:** Alternância imediata entre Celsius (°C) e Fahrenheit (°F).
-- **Acessibilidade de Ponta:** Desenvolvido seguindo boas práticas de semântica HTML e atributos ARIA para leitores de tela.
+## ✨ Funcionalidades
 
-### 🛠️ Tecnologias Utilizadas
+### 🔎 Busca Global
 
-- **TypeScript:** Tipagem estática e organização robusta de código.
-- **Vite:** Empacotador (bundler) ultra-rápido para desenvolvimento moderno.
-- **HTML5 & CSS3:** Arquitetura semântica e estilos Vanilla CSS customizados, com variáveis CSS poderosas para suporte nativo a temas.
-- **Open-Meteo API:** Integração com APIs gratuitas e de alta fidelidade para previsão do tempo, geolocalização reversa e qualidade do ar.
-- **Prettier & ESLint:** Linters e formatadores pré-configurados para garantir a qualidade de código do ecossistema JavaScript.
+Pesquise cidades ao redor do mundo através de uma busca com **autocompletar inteligente**, facilitando a localização da cidade desejada.
 
-### 📂 Estrutura do Projeto
+### 📍 Geolocalização
+
+Utilize a geolocalização nativa do navegador para consultar rapidamente as condições climáticas da sua localização atual.
+
+### 📅 Previsão para 7 Dias
+
+Visualize a previsão meteorológica dos próximos **7 dias**, incluindo:
+
+* 🌡️ Temperaturas máximas e mínimas
+* ☁️ Condições meteorológicas
+* 📆 Previsão diária
+
+### 📊 Métricas Meteorológicas
+
+Consulte informações detalhadas sobre as condições atuais:
+
+* ☀️ **Índice UV** — indicador de intensidade de 0 a 12
+* 💨 **Vento** — velocidade em km/h e direção em graus
+* 🌅 **Nascer do Sol**
+* 🌇 **Pôr do Sol**
+* 💧 **Umidade**
+* 🌡️ **Sensação térmica**
+* 👁️ **Visibilidade**
+* 🌫️ **Qualidade do ar**
+* 📈 **AQI** — índice de qualidade do ar dos Estados Unidos
+
+### 🌎 Internacionalização
+
+O Climax possui suporte a três idiomas:
+
+* 🇧🇷 **Português — pt-BR**
+* 🇺🇸 **Inglês — en-US**
+* 🇪🇸 **Espanhol — es**
+
+A interface pode adaptar o idioma de acordo com a configuração do usuário.
+
+### 🌓 Temas
+
+Escolha a aparência que melhor combina com você:
+
+* ☀️ **Light**
+* 🌙 **Dark**
+* 🖥️ **System**
+
+No modo **System**, a aplicação acompanha automaticamente a preferência de aparência configurada no sistema operacional.
+
+### 🌡️ Unidade de Temperatura
+
+Alterne instantaneamente entre:
+
+* 🌡️ **Celsius (°C)**
+* 🌡️ **Fahrenheit (°F)**
+
+A preferência é persistida localmente para manter a configuração entre sessões.
+
+### ♿ Acessibilidade
+
+O projeto foi desenvolvido seguindo boas práticas de acessibilidade na Web, utilizando:
+
+* 🏷️ HTML semântico
+* 🎯 Atributos ARIA quando necessários
+* ⌨️ Navegação por teclado
+* 👁️ Estrutura adequada para leitores de tela
+* 🔊 Informações e controles com semântica apropriada
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia            | Utilização                                  |
+| :-------------------- | :------------------------------------------ |
+| 🟦 **TypeScript**     | Tipagem estática e organização da aplicação |
+| ⚡ **Vite**            | Desenvolvimento e build do projeto          |
+| 🧱 **HTML5**          | Estrutura semântica da aplicação            |
+| 🎨 **Vanilla CSS**    | Estilização e responsividade                |
+| 🌐 **Open-Meteo API** | Dados meteorológicos e qualidade do ar      |
+| 🌎 **i18n**           | Internacionalização da aplicação            |
+| 💾 **LocalStorage**   | Persistência das preferências do usuário    |
+| 🧹 **ESLint**         | Análise e qualidade do código               |
+| ✨ **Prettier**        | Padronização e formatação do código         |
+
+---
+
+## 🏗️ Arquitetura
+
+O Climax foi desenvolvido sem frameworks frontend, utilizando uma arquitetura baseada em **módulos TypeScript**, componentes reutilizáveis e separação de responsabilidades.
+
+A aplicação separa responsabilidades entre:
+
+```text
+API
+ ↓
+Estado da aplicação
+ ↓
+Componentes
+ ↓
+Renderização
+ ↓
+Interação do usuário
+```
+
+Essa abordagem facilita a manutenção, organização e evolução do projeto.
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```text
 climax/
-├── public/                 # Favicon e ativos estáticos públicos
+│
+├── public/
+│   └── favicon.svg
+│
 ├── src/
 │   ├── api/
-│   │   └── openMeteo.ts    # Serviços de busca e consumo das APIs Open-Meteo
+│   │   └── openMeteo.ts
+│   │
 │   ├── assets/
-│   │   └── images/         # Capturas de tela para documentação
-│   ├── components/         # Componentes modulares reutilizáveis (HTML Markup)
+│   │   └── images/
+│   │
+│   ├── components/
 │   │   ├── footer.ts
 │   │   ├── header.ts
 │   │   └── search.ts
+│   │
 │   ├── types/
-│   │   └── index.ts        # Interfaces e tipos de dados estáticos do TypeScript
-│   ├── app.ts              # Ponto de entrada que escuta o carregamento do DOM
-│   ├── i18n.ts             # Dicionário de traduções e utilitários de idioma
-│   ├── main.ts             # Lógica central da aplicação (Estado, Eventos e Renderização)
-│   ├── storage.ts          # Gerenciamento de persistência de Tema e Unidade no LocalStorage
-│   ├── styles.css          # Estilização completa do layout com CSS Grid/Flexbox e Temas
-│   └── utils.ts            # Funções utilitárias auxiliares (ex: escape de HTML)
-├── package.json            # Scripts de build, dev e dependências do projeto
-├── tsconfig.json           # Configurações do compilador TypeScript
-└── eslint.config.mjs       # Configurações de Linting
+│   │   └── index.ts
+│   │
+│   ├── app.ts
+│   ├── i18n.ts
+│   ├── main.ts
+│   ├── storage.ts
+│   ├── styles.css
+│   └── utils.ts
+│
+├── package.json
+├── tsconfig.json
+├── eslint.config.mjs
+└── vite.config.ts
 ```
 
-### 🚀 Como Executar o Projeto
+### 📁 Principais diretórios
 
-Siga as etapas abaixo para clonar e rodar o projeto localmente:
+**`api/`**
+Responsável pela comunicação com os serviços externos.
 
-1. **Instale as dependências:**
-   Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina. No terminal, execute:
+**`components/`**
+Contém componentes reutilizáveis da interface.
 
-   ```bash
-   npm install
-   ```
+**`types/`**
+Centraliza interfaces e tipos utilizados pela aplicação.
 
-2. **Inicie o servidor de desenvolvimento:**
+**`assets/`**
+Armazena imagens e outros recursos utilizados pelo projeto.
 
-   ```bash
-   npm run dev
-   ```
+**`locales/` / `i18n.ts`**
+Responsáveis pelo sistema de internacionalização.
 
-   _O Vite abrirá uma porta local (geralmente `http://localhost:5173`). Abra o link no navegador._
+**`storage.ts`**
+Gerencia as preferências persistidas no `LocalStorage`.
 
-3. **Construa o projeto para produção (Build):**
+**`utils.ts`**
+Concentra funções utilitárias utilizadas em diferentes partes da aplicação.
 
-   ```bash
-   npm run build
-   ```
-
-   _Isso gerará os arquivos compilados e otimizados na pasta `/dist`._
-
-4. **Verifique ou corrija a formatação e linting:**
-   ```bash
-   # Rodar linting
-   npm run lint
-   # Corrigir linting automaticamente
-   npm run lint:fix
-   # Formatar código com Prettier
-   npm run format
-   ```
+**`styles.css`**
+Contém a estilização global, responsividade, temas e layouts utilizando CSS moderno.
 
 ---
 
-# 🇬🇧 Climax (English)
+## 🚀 Como Executar
 
-## 📝 Description
+### 📋 Pré-requisitos
 
-**Climax** is an elegant and high-performance weather dashboard built entirely with pure TypeScript (no heavy frameworks) and styled using modern Vanilla CSS. It provides a rich, responsive, and fully accessible user experience while consuming global real-time meteorological data from the Open-Meteo API.
+Antes de executar o projeto, certifique-se de possuir:
 
-### 📷 Demonstration (Screenshots)
+* 🟢 **Node.js**
+* 📦 **npm**
+* 🔧 **Git**
 
-We present a highly polished and adaptive interface with full support for Light, Dark, and OS-synchronized Theme modes:
+### 1️⃣ Clone o repositório
 
-#### Dark Mode
+```bash
+git clone https://github.com/romaosantosalisson/climax.git
+```
 
-<p align="center">
-  <img src="./src/assets/images/climax-dark-1.png" alt="Climax Dark Mode - Home" width="45%" style="border-radius: 8px; margin-right: 2%;" />
-  <img src="./src/assets/images/climax-dark-2.png" alt="Climax Dark Mode - Details" width="45%" style="border-radius: 8px;" />
-</p>
+Entre no diretório:
 
-#### Light Mode
+```bash
+cd climax
+```
 
-<p align="center">
-  <img src="./src/assets/images/climax-light-1.png" alt="Climax Light Mode - Home" width="45%" style="border-radius: 8px; margin-right: 2%;" />
-  <img src="./src/assets/images/climax-light-2.png" alt="Climax Light Mode - Details" width="45%" style="border-radius: 8px;" />
-</p>
+### 2️⃣ Instale as dependências
 
-### ✨ Key Features
+```bash
+npm install
+```
 
-- **Global City Search:** Find weather details for any city worldwide with smart geocoding autocompletion.
-- **Native Geolocation:** Instantly fetch the local weather for your current position in one click using the browser’s Geolocation API.
-- **7-Day Forecast:** A clean, intuitive layout for the upcoming week featuring daily maximum and minimum temperatures, plus illustrated conditions.
-- **Daily Metrics & Highlights:**
-  - **UV Index:** Displayed with an interactive intensity gauge from 0 to 12.
-  - **Wind Status:** Speed (km/h) and exact direction with a compass degree (°) representation.
-  - **Sunrise & Sunset:** Precise time calculation based on the selected city's timezone.
-  - **Humidity & Feels Like:** Current humidity and apparent temperature felt by the human body.
-  - **Visibility:** Highly precise measurement in kilometers.
-  - **Air Quality:** US Air Quality Index (AQI) with real-time feedback (Good, Moderate, Warning, Unhealthy).
-- **Internationalization (i18n):** Complete out-of-the-box support for three languages: **English (en-US)**, **Portuguese (pt-BR)**, and **Spanish (es)**.
-- **Flexible Themes:** Smooth toggle transitions between **Light**, **Dark**, and **System** settings, fully updating visual indicators and screen-reader accessibility labels.
-- **Temperature Unit Conversion:** Toggle instantly between Celsius (°C) and Fahrenheit (°F).
-- **High Accessibility Standards:** Implemented according to semantic HTML best practices and accessible ARIA attributes to support screen readers.
+### 3️⃣ Execute em desenvolvimento
 
-### 🛠️ Technologies Used
+```bash
+npm run dev
+```
 
-- **TypeScript:** Strong typing and robust code architecture.
-- **Vite:** Ultra-fast bundler for modern web development.
-- **HTML5 & CSS3:** Semantic building blocks and custom Vanilla CSS layout using CSS variables for native theme mapping.
-- **Open-Meteo API:** High-fidelity, free APIs for weather forecasts, reverse geocoding, and air quality indices.
-- **Prettier & ESLint:** Preconfigured linting and formatting workflows ensuring codebase quality.
+O Vite iniciará o servidor de desenvolvimento.
 
-### 📂 Project Structure
+Normalmente, a aplicação estará disponível em:
 
 ```text
-climax/
-├── public/                 # Favicon and public static assets
-├── src/
-│   ├── api/
-│   │   └── openMeteo.ts    # Open-Meteo API integration & reverse geocoding
-│   ├── assets/
-│   │   └── images/         # Documentation screenshots
-│   ├── components/         # Modular & reusable components (HTML Markups)
-│   │   ├── footer.ts
-│   │   ├── header.ts
-│   │   └── search.ts
-│   ├── types/
-│   │   └── index.ts        # TypeScript static types and interfaces
-│   ├── app.ts              # Entry point matching DOMContentLoaded
-│   ├── i18n.ts             # Translation dictionaries and language utilities
-│   ├── main.ts             # Application controller (State, Events, and Rendering)
-│   ├── storage.ts          # LocalStorage persistence manager (Theme & Units)
-│   ├── styles.css          # Global styling using modern CSS variables, Grid, and Flexbox
-│   └── utils.ts            # Utility helpers (e.g. HTML sanitization/escape)
-├── package.json            # Scripts, tool configuration, and dependencies
-├── tsconfig.json           # Compiler options for TypeScript
-└── eslint.config.mjs       # Linting and quality assurance rules
+http://localhost:5173
 ```
 
-### 🚀 Getting Started
+### 4️⃣ Gere o build de produção
 
-Follow these steps to clone and run the project locally:
+```bash
+npm run build
+```
 
-1. **Install dependencies:**
-   Ensure you have [Node.js](https://nodejs.org/) installed on your machine. In your terminal, run:
+Os arquivos otimizados serão gerados no diretório:
 
-   ```bash
-   npm install
-   ```
+```text
+dist/
+```
 
-2. **Run the development server:**
+### 5️⃣ Visualize a build
 
-   ```bash
-   npm run dev
-   ```
-
-   _Vite will launch the local port (usually `http://localhost:5173`). Open the link in your browser._
-
-3. **Build for production:**
-
-   ```bash
-   npm run build
-   ```
-
-   _This outputs highly optimized build files to the `/dist` directory._
-
-4. **Verify formatting and code quality:**
-   ```bash
-   # Run linters
-   npm run lint
-   # Autofix code style issues
-   npm run lint:fix
-   # Format files with Prettier
-   npm run format
-   ```
+```bash
+npm run preview
+```
 
 ---
 
-#### 🧑🏻‍💻 Autor / Author
+## 🧹 Qualidade de Código
 
-Feito por/Made by **`Álisson`** &copy; 2026.
+O projeto utiliza **ESLint** e **Prettier** para manter o código consistente e facilitar a manutenção.
+
+### 🔍 Executar ESLint
+
+```bash
+npm run lint
+```
+
+### 🔧 Corrigir problemas automaticamente
+
+```bash
+npm run lint:fix
+```
+
+### ✨ Formatar o projeto
+
+```bash
+npm run format
+```
+
+### ✅ Verificar formatação
+
+```bash
+npm run format:check
+```
+
+---
+
+## 🌐 API
+
+O projeto utiliza a **Open-Meteo API** para obter dados meteorológicos.
+
+Entre as informações utilizadas estão:
+
+* 🌡️ Temperatura
+* 💨 Vento
+* 💧 Umidade
+* ☀️ Índice UV
+* 🌅 Nascer e pôr do sol
+* 📅 Previsão diária
+* 👁️ Visibilidade
+* 🌫️ Qualidade do ar
+* 📍 Dados de localização
+
+---
+
+## 🚀 Deploy
+
+O **Climax** está disponível online através do GitHub Pages.
+
+<div align="center">
+
+  <a href="https://romaosantosalisson.github.io/climax/">
+    <img
+      src="https://img.shields.io/badge/🌐%20Climax-Acessar%20Aplicação-2ea44f?style=for-the-badge"
+      alt="Acessar Climax"
+    />
+  </a>
+
+</div>
+
+---
+
+## 🎯 Objetivos do Projeto
+
+O Climax foi desenvolvido com foco em colocar em prática conceitos importantes do desenvolvimento frontend moderno:
+
+* 📱 Desenvolvimento **Mobile-First**
+* 📐 Design responsivo
+* ⚡ Performance
+* ♿ Acessibilidade
+* 🌎 Internacionalização
+* 🧩 Arquitetura modular
+* 🟦 TypeScript
+* 🎨 CSS moderno
+* 💾 Persistência local
+* 🧹 Qualidade e padronização de código
+* 🚀 Build e deploy
+
+---
+
+## 💡 Princípios
+
+> **Mobile First 📱**
+> A interface começa pelo menor dispositivo e evolui para telas maiores.
+
+> **Accessibility ♿**
+> Uma boa interface deve ser acessível para o maior número possível de pessoas.
+
+> **Performance ⚡**
+> Menos abstrações e dependências desnecessárias significam uma aplicação mais leve.
+
+> **Simplicity 🧩**
+> Utilizar as próprias tecnologias da Web quando elas são suficientes.
+
+---
+
+## 👨🏻‍💻 Autor
+
+<div align="center">
+
+  <img src="./public/favicon.svg" alt="Climax Logo" width="60" />
+
+### Álisson Romão Santos
+
+Desenvolvido com ❤️, ☕ e curiosidade em explorar novas habilidades em programação.
+
+  <br />
+
+  <a href="https://github.com/romaosantosalisson">
+    <img
+      src="https://img.shields.io/badge/GitHub-Álisson%20Romão%20Santos-181717?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub"
+    />
+  </a>
+
+</div>
+
+---
+
+<div align="center">
+
+### ⭐ Gostou do projeto?
+
+Se o **Climax** chamou sua atenção, considere deixar uma ⭐ no repositório!
+
+  <br />
+
+**© 2026 Climax**
+
+  <br />
+
+*Made with ❤️ and ☕ by Álisson Romão Santos*
+
+</div>
