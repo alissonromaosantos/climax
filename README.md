@@ -6,7 +6,7 @@
 
   <br />
 
-[🌐 **Acessar o Climax**](https://romaosantosalisson.github.io/climax/)
+[🌐 **Acessar o Climax**](https://alissonromaosantos.github.io/climax/)
 
   <br />
 
@@ -258,7 +258,7 @@ Antes de executar o projeto, certifique-se de possuir:
 ### 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/romaosantosalisson/climax.git
+git clone https://github.com/alissonromaosantos/climax.git
 ```
 
 Entre no diretório:
@@ -361,7 +361,7 @@ O **Climax** está disponível online através do GitHub Pages.
 
 <div align="center">
 
-  <a href="https://romaosantosalisson.github.io/climax/">
+  <a href="https://alissonromaosantos.github.io/climax/">
     <img
       src="https://img.shields.io/badge/🌐%20Climax-Acessar%20Aplicação-2ea44f?style=for-the-badge"
       alt="Acessar Climax"
@@ -418,7 +418,7 @@ Desenvolvido com ❤️, ☕ e curiosidade em explorar novas habilidades em prog
 
   <br />
 
-  <a href="https://github.com/romaosantosalisson">
+  <a href="https://github.com/alissonromao">
     <img
       src="https://img.shields.io/badge/GitHub-Álisson%20Romão%20Santos-181717?style=for-the-badge&logo=github&logoColor=white"
       alt="GitHub"
